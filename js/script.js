@@ -17,6 +17,7 @@ function secondsToMinutesSeconds(seconds) {
     return `${formattedMinutes}:${formattedSeconds}`;
 }
 
+//get songs from the folder
 async function getSongs(folder) {
     currFolder = folder;
     let a = await fetch(`/${folder}/`)
@@ -71,6 +72,7 @@ const playMusic = (track, pause = false) => {
 
 }
 
+//display the albums
 async function displayAlbums() {
     console.log("displaying albums")
     let a = await fetch(`/songs/`)
